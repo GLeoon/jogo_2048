@@ -2,7 +2,7 @@ import cv2
 from show_game import ShowDisplay
 
 def main():
-    my_board = [[0, 0, 2, 0], [2, 18, 0, 0], [0, 0, 4, 0], [0, 0, 0, 4]]
+    my_board = [[0, 0, 2, 0], [2, 32, 0, 0], [0, 0, 4, 0], [0, 0, 0, 4]]
 
     showing = ShowDisplay(my_board)
     showing.print_display()
@@ -15,6 +15,7 @@ def main():
             break
         if k == 119 or k == 115 or k == 100 or k == 97:
             #call the fuction here
+            print("hello")
  
     cv2.destroyAllWindows()
 

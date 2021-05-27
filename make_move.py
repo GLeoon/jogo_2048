@@ -4,4 +4,5 @@ class Move:
         self.direction = direction
 
     def make_move(self):
-        
+        for row in self.board:
+            for colum in row:

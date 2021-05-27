@@ -8,7 +8,7 @@ class ShowDisplay:
         self.board = board
         self.largest = self.identify_largest()
         self.img = np.zeros((400, 420, 3), np.uint8)
-        self._font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+        self._font = cv2.FONT_HERSHEY_PLAIN
 
     def identify_largest(self):
         temp_largest = 0
