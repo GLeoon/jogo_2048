@@ -13,6 +13,7 @@ class ShowDisplay:
     def print_display(self, new_board):
         self.board = new_board
         self.identify_largest()
+        self.img = np.zeros((400, 420, 3), np.uint8)
         count = 1
         for row in self.board:
             curr_row = '|'
