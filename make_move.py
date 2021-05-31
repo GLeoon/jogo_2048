@@ -1,7 +1,7 @@
 class Move:
-    def __init__(self,elements, direction):
+    def __init__(self, elements, direction):
         self.old_elements = elements
-        self.direction=direction
+        self.direction = direction
         self.new_elements = []
         self.sum = False
         self.move()
@@ -42,9 +42,9 @@ class Move:
 
         for i in range(len(self.old_elements)):
             elements[i] = self.reverse(elements[i])
-        self.new_elements=elements
+        self.new_elements = elements
 
-    def move_left(self,elements):
+    def move_left(self, elements):
         for i in range(len(self.old_elements)):
             row = self.make_move_side(elements[i])
             row = self.check_number_equal_side(row)
@@ -61,7 +61,7 @@ class Move:
 
     def check_number_equal_side(self, row):
         for i in range(len(self.old_elements) - 1):
-            if row[i] == row[i+1]:
+            if row[i] == row[i+1] and row[i] != 0:
                 row[i] *= 2
                 row[i+1] = 0
                 self.sum = True
@@ -85,9 +85,7 @@ class Move:
                     row[i][j] = temp
         return row
 
-
-        
-            # row = self.make_move_side(self.old_elements[i])
-            # row = self.check_number_equal_side(row)
-            # row = self.make_move_side(row)
-            # self.new_elements.append(row)
+        # row = self.make_move_side(self.old_elements[i])
+        # row = self.check_number_equal_side(row)
+        # row = self.make_move_side(row)
+        # self.new_elements.append(row)
